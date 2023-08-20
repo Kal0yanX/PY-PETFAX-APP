@@ -7,8 +7,8 @@ def index():
     if request.method == 'POST':
         print(request.form)
         return 'Thanks for submitting a fun fact!'
-    return 'This is the facts index'
+    return render_template('facts/index.html')
 
 @bp.route("/new")
 def fact():
-    return render_template("new.html", )
+    return render_template("facts/new.html", )
